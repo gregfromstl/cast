@@ -1,0 +1,6 @@
+{
+  "siteId": "83890578-96ec-4259-8c7c-5fa689bd1577",
+  "domain": "onlycast",
+  "buildCommand": "npm run build",
+  "buildDir": "build"
+}

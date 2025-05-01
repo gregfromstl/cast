@@ -41,6 +41,7 @@
 
 		if (response.ok) {
 			alert('Cast sent successfully');
+			form.reset(); // Reset the form after successful submission
 		} else {
 			alert('Something went wrong submitting the cast');
 		}
@@ -59,3 +60,4 @@
 		<Button type="submit">Cast</Button>
 	</div>
 </form>
+
