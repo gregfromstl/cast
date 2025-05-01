@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Silkscreen:wght@400;700&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-primary: oklch(69.706% 0.20349 43.804);
+  --color-primary-50: oklch(89.967% 0.06119 54.842);
+  --color-primary-100: oklch(87.272% 0.07975 55.357);
+  --color-primary-200: oklch(82.153% 0.11594 54.732);
+  --color-primary-300: oklch(77.47% 0.14973 52.773);
+  --color-primary-400: oklch(73.17% 0.18018 49.123);
+  --color-primary-500: oklch(69.706% 0.20349 43.804);
+  --color-primary-600: oklch(58.016% 0.16774 44.35);
+  --color-primary-700: oklch(45.852% 0.12914 45.894);
+  --color-primary-800: oklch(32.668% 0.08836 48.446);
+  --color-primary-900: oklch(18.017% 0.04269 58.969);
+  --color-primary-950: oklch(7.5348% 0.01676 66.154);
+  --font-silkscreen: Silkscreen, sans-serif;
+}
+
