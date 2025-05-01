@@ -44,7 +44,7 @@
 	on:submit={handleSubmit}
 	class="flex w-full max-w-2xl flex-col items-end gap-y-4"
 >
-	<h1 class="font-silkscreen mb-4 w-full text-center text-6xl">Cast</h1>
+	<h1 class="font-silkscreen mb-4 w-full text-center text-6xl">Only Cast</h1>
 	<TextArea name="text" />
 	<div>
 		<Button type="submit">Cast</Button>

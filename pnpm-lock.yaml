@@ -61,6 +61,9 @@ devDependencies:
   '@tailwindcss/vite':
     specifier: ^4.0.0
     version: 4.1.3(vite@6.2.6)
+  '@types/node':
+    specifier: ^22.15.3
+    version: 22.15.3
   '@vitest/browser':
     specifier: ^3.1.1
     version: 3.1.1(playwright@1.51.1)(vite@6.2.6)(vitest@3.1.1)
@@ -111,10 +114,10 @@ devDependencies:
     version: 8.29.1(eslint@9.24.0)(typescript@5.8.3)
   vite:
     specifier: ^6.2.5
-    version: 6.2.6
+    version: 6.2.6(@types/node@22.15.3)
   vitest:
     specifier: ^3.1.1
-    version: 3.1.1(@vitest/browser@3.1.1)
+    version: 3.1.1(@types/node@22.15.3)(@vitest/browser@3.1.1)
 
 packages:
 
@@ -902,7 +905,7 @@ packages:
       storybook: 8.6.12(prettier@3.5.3)
       svelte: 5.26.2
       svelte-ast-print: 0.4.2(svelte@5.26.2)
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
       zimmerframe: 1.1.2
     transitivePeerDependencies:
       - babel-plugin-macros
@@ -954,7 +957,7 @@ packages:
       browser-assert: 1.2.1
       storybook: 8.6.12(prettier@3.5.3)
       ts-dedent: 2.2.0
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     dev: true
 
   /@storybook/components@8.6.12(storybook@8.6.12):
@@ -1037,7 +1040,7 @@ packages:
       prompts: 2.4.2
       storybook: 8.6.12(prettier@3.5.3)
       ts-dedent: 2.2.0
-      vitest: 3.1.1(@vitest/browser@3.1.1)
+      vitest: 3.1.1(@types/node@22.15.3)(@vitest/browser@3.1.1)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -1116,7 +1119,7 @@ packages:
       sveltedoc-parser: 4.2.1
       ts-dedent: 2.2.0
       typescript: 5.8.3
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     transitivePeerDependencies:
       - '@babel/core'
       - coffeescript
@@ -1166,7 +1169,7 @@ packages:
       '@storybook/svelte-vite': 8.6.12(@sveltejs/vite-plugin-svelte@5.0.3)(postcss@8.5.3)(storybook@8.6.12)(svelte@5.26.2)(vite@6.2.6)
       storybook: 8.6.12(prettier@3.5.3)
       svelte: 5.26.2
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     transitivePeerDependencies:
       - '@babel/core'
       - '@sveltejs/vite-plugin-svelte'
@@ -1245,7 +1248,7 @@ packages:
       set-cookie-parser: 2.7.1
       sirv: 3.0.1
       svelte: 5.26.2
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     dev: true
 
   /@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.3)(svelte@5.26.2)(vite@6.2.6):
@@ -1259,7 +1262,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.26.2)(vite@6.2.6)
       debug: 4.4.0
       svelte: 5.26.2
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1277,7 +1280,7 @@ packages:
       kleur: 4.1.5
       magic-string: 0.30.17
       svelte: 5.26.2
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
       vitefu: 1.0.6(vite@6.2.6)
     transitivePeerDependencies:
       - supports-color
@@ -1426,7 +1429,7 @@ packages:
       '@tailwindcss/node': 4.1.3
       '@tailwindcss/oxide': 4.1.3
       tailwindcss: 4.1.3
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     dev: true
 
   /@testing-library/dom@10.4.0:
@@ -1492,6 +1495,12 @@ packages:
 
   /@types/mdx@2.0.13:
     resolution: {integrity: sha512-+OWZQfAYyio6YkJb3HLxDrvnx6SWWDbC0zVPfBRzUk0/nqoDyf6dNxQi3eArPe8rJ473nobTMQ/8Zk+LxJ+Yuw==}
+    dev: true
+
+  /@types/node@22.15.3:
+    resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
+    dependencies:
+      undici-types: 6.21.0
     dev: true
 
   /@types/pug@2.0.10:
@@ -1647,7 +1656,7 @@ packages:
       playwright: 1.51.1
       sirv: 3.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.1.1(@vitest/browser@3.1.1)
+      vitest: 3.1.1(@types/node@22.15.3)(@vitest/browser@3.1.1)
       ws: 8.18.1
     transitivePeerDependencies:
       - bufferutil
@@ -1678,7 +1687,7 @@ packages:
       std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.1.1(@vitest/browser@3.1.1)
+      vitest: 3.1.1(@types/node@22.15.3)(@vitest/browser@3.1.1)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1715,7 +1724,7 @@ packages:
       '@vitest/spy': 3.1.1
       estree-walker: 3.0.3
       magic-string: 0.30.17
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     dev: true
 
   /@vitest/pretty-format@2.0.5:
@@ -4203,6 +4212,10 @@ packages:
     hasBin: true
     dev: true
 
+  /undici-types@6.21.0:
+    resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
+    dev: true
+
   /universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
@@ -4245,7 +4258,7 @@ packages:
     resolution: {integrity: sha512-ocyWc3bAHBB/guyqJQVI5o4BZkPhznPYUG2ea80Gond/BgNWpap8TOmLSeeQG7bnh2KMISxskdADG59j7zruhw==}
     dev: true
 
-  /vite-node@3.1.1:
+  /vite-node@3.1.1(@types/node@22.15.3):
     resolution: {integrity: sha512-V+IxPAE2FvXpTCHXyNem0M+gWm6J7eRyWPR6vYoG/Gl+IscNOjXzztUhimQgTxaAoUoj40Qqimaa0NLIOOAH4w==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -4254,7 +4267,7 @@ packages:
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 2.0.3
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4270,7 +4283,7 @@ packages:
       - yaml
     dev: true
 
-  /vite@6.2.6:
+  /vite@6.2.6(@types/node@22.15.3):
     resolution: {integrity: sha512-9xpjNl3kR4rVDZgPNdTL0/c6ao4km69a/2ihNQbcANz8RuCOK3hQBmLSJf3bRKVQjVMda+YvizNE8AwvogcPbw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -4310,6 +4323,7 @@ packages:
       yaml:
         optional: true
     dependencies:
+      '@types/node': 22.15.3
       esbuild: 0.25.2
       postcss: 8.5.3
       rollup: 4.40.0
@@ -4325,10 +4339,10 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 6.2.6
+      vite: 6.2.6(@types/node@22.15.3)
     dev: true
 
-  /vitest@3.1.1(@vitest/browser@3.1.1):
+  /vitest@3.1.1(@types/node@22.15.3)(@vitest/browser@3.1.1):
     resolution: {integrity: sha512-kiZc/IYmKICeBAZr9DQ5rT7/6bD9G7uqQEki4fxazi1jdVl2mWGzedtBs5s6llz59yQhVb7FFY2MbHzHCnT79Q==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
@@ -4356,6 +4370,7 @@ packages:
       jsdom:
         optional: true
     dependencies:
+      '@types/node': 22.15.3
       '@vitest/browser': 3.1.1(playwright@1.51.1)(vite@6.2.6)(vitest@3.1.1)
       '@vitest/expect': 3.1.1
       '@vitest/mocker': 3.1.1(vite@6.2.6)
@@ -4374,8 +4389,8 @@ packages:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.2.6
-      vite-node: 3.1.1
+      vite: 6.2.6(@types/node@22.15.3)
+      vite-node: 3.1.1(@types/node@22.15.3)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
       - jiti

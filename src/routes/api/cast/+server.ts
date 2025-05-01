@@ -1,13 +1,10 @@
 import { fail } from "@sveltejs/kit";
-import { NEYNAR_API_KEY } from '$env/static/private';
 
 export const POST = async (request: Request) => {
+	const NEYNAR_API_KEY = process.env.NEYNAR_API_KEY as string;
 	const data = await request.formData();
-	console.log(data);
 	const text = data.get('text');
 	const signer_uuid = data.get('signer_uuid');
-	console.log(signer_uuid);
-	console.log(text);
 
 	const options = {
 		method: 'POST',
