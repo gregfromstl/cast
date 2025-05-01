@@ -9,9 +9,9 @@
 		const form = event.target as HTMLFormElement;
 		const formData = new FormData(form);
 
-		let signer = localStorage.getItem('signer_uuid');
+		let signer_uuid = localStorage.getItem('signer_uuid');
 
-		if (!signer) {
+		if (!signer_uuid) {
 			const result = await new Promise<{ signer_uuid: string }>((resolve) => {
 				handleSignIn('e768efc4-2f48-41f6-8bcf-31072360fd13', (data) => {
 					if (data.is_authenticated) {
@@ -20,18 +20,26 @@
 					}
 				});
 			});
-			signer = result.signer_uuid;
+			signer_uuid = result.signer_uuid;
 		}
 
-		formData.append('signer_uuid', signer);
+		formData.append('signer_uuid', signer_uuid);
 
-		const response = await fetch('/api/cast', {
-			method: form.method,
-			body: formData
-		});
+		const options = {
+			method: 'POST',
+			headers: {
+				'x-api-key': import.meta.env.VITE_NEYNAR_API_KEY as string,
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({
+				signer_uuid,
+				text: formData.get('text')
+			})
+		};
+
+		const response = await fetch('https://api.neynar.com/v2/farcaster/cast', options);
 
 		if (response.ok) {
-			// await goto(form.action);
 			alert('Cast sent successfully');
 		} else {
 			alert('Something went wrong submitting the cast');
@@ -39,12 +47,13 @@
 	};
 </script>
 
+<h1 class="font-silkscreen mb-4 w-full text-center text-6xl">Only Cast</h1>
+
 <form
 	method="POST"
 	on:submit={handleSubmit}
 	class="flex w-full max-w-2xl flex-col items-end gap-y-4"
 >
-	<h1 class="font-silkscreen mb-4 w-full text-center text-6xl">Only Cast</h1>
 	<TextArea name="text" />
 	<div>
 		<Button type="submit">Cast</Button>
