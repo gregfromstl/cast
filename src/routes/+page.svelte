@@ -40,8 +40,8 @@
 		const response = await fetch('https://api.neynar.com/v2/farcaster/cast', options);
 
 		if (response.ok) {
+			form.reset();
 			alert('Cast sent successfully');
-			form.reset(); // Reset the form after successful submission
 		} else {
 			alert('Something went wrong submitting the cast');
 		}
